@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="@drawable/albumbackground">
+    <ImageView
+        android:src="@drawable/albumtitle"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        android:id="@+id/imageView1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <MvvmCross.Binding.Droid.Views.MvxGridView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/mvxGridView1"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        local:MvxBind="ItemsSource AlbumSource; ItemClick FullViewCommand"
+        local:MvxItemTemplate="@layout/album_grid_cell" />
+</LinearLayout>

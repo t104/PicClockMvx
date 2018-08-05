@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:id="@+id/PersonImage"
+        local:MvxBind="AssetImagePath ImageName" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="80sp"
+        android:id="@+id/TimeText"
+        android:inputType="time"
+        android:text="Time Now"
+        local:MvxBind="Text Time, Converter=DateTimeToString, ConverterParameter=HH:mm"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp">
+        <Button
+            android:text=""
+            android:scaleType="fitXY"
+            android:id="@+id/ProfileButton"
+            android:background="@drawable/profilebutton"
+            local:MvxBind="Click ProfileCommand"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+        <Button
+            android:text=""
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/button1"
+            android:background="@drawable/savebutton"
+            android:layout_marginLeft="10dp"
+            local:MvxBind="Click SaveCommand" />
+    </LinearLayout>
+</FrameLayout>

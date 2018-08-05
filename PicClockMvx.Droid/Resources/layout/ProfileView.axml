@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="@drawable/profilebackground">
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/imageView2"
+        android:layout_weight="4"
+        android:layout_marginTop="15dp"
+        local:MvxBind="AssetImagePath ProfileImageName" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:textColor="@android:color/black"
+            android:textSize="60sp"
+            android:fontFamily="@font/oswaldregular"
+            android:fontStyle="normal"
+            android:fontWeight="400"
+            local:MvxBind="Text Name" />
+        <TextView
+            android:text="Birthday"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:fontFamily="@font/oswaldregular"
+            android:fontStyle="normal"
+            android:fontWeight="400"
+            local:MvxBind="Text Birthday" />
+        <TextView
+            android:text="Home"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:fontFamily="@font/oswaldregular"
+            android:fontStyle="normal"
+            android:fontWeight="400"
+            local:MvxBind="Text Home" />
+        <ScrollView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView1">
+            <TextView
+                android:text="Message"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/textView4"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                local:MvxBind="Text Message" />
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

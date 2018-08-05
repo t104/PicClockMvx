@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:weightSum="3"
+    android:background="@drawable/yassan">
+    <ImageView
+        android:src="@drawable/title"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:id="@+id/imageView1"
+        android:layout_weight="1"
+        android:adjustViewBounds="false" />
+    <Button
+        android:text=""
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:id="@+id/ContinueButton"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/continuebutton"
+        local:MvxBind="Click ClockCommand" />
+    <Button
+        android:text=""
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:id="@+id/AlbumButton"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/albumbutton"
+        local:MvxBind="Click AlbumCommand" />
+    <Button
+        android:text=""
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/initializebutton"
+        android:id="@+id/InitializeButton"
+        local:MvxBind="Click InitializeCommand" />
+</LinearLayout>
